@@ -1,0 +1,30 @@
+<template>
+  <div>
+    <input class="input--default"
+      type="text"
+      placeholder="User ID"
+      v-model="userId">
+    <button class="button--green" @click="onLoadUser">Load User</button>
+    <nuxt-child />
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      userId: ''
+    }
+  },
+  methods: {
+    onLoadUser() {
+      this.$router.push('/users/' + this.userId);
+    }
+  },
+  layout: 'users'
+}
+</script>
+
+<style scoped>
+
+</style>

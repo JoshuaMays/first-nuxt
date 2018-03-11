@@ -4,7 +4,7 @@
     <nuxt-link v-for="product in products" 
       :key="product.id"
       :to="`/products/${product.id}`"
-      tag="button">
+      tag="button" :class="'button--green'">
       Product #{{product.id}}
     </nuxt-link>
   </div>
